@@ -1,0 +1,11 @@
+<h2>Rederizando uma lista de dados</h2>
+<ul class="lista-produtos">
+    <!--Laço de repetição for (para cada celular em celulares)-->
+    <li *ngFor="let celular of celulares">
+        <strong>{{ celular.nome }}</strong>
+        <p>{{ celular.descricao }}</p>
+    <!--Se celular estiver esgotado, bote "esgotado", senão, bote "disponível"-->
+        <span [ngClass]="celular.esgotado ? 'esgotado' : '' ">{{ celular.esgotado ? "esgotado" : "disponível" }}</span>
+
+    </li>
+</ul>
